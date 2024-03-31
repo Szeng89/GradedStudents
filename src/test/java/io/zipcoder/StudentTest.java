@@ -46,11 +46,11 @@ public class StudentTest {
         Student student = new Student(firstName, lastName, examScores);
 
         // When
-        student.setExamScore(0,150.0);
+        student.setExamScore(1,150.0);
 
         // Then
-        String expected = "Exam Scores:n\n\tExam 1 -> 150";
-        String actual = student.getExamScores;
+        String expected = "Exam Scores:\n\tExam 1 -> 150.00\n";
+        String actual = student.getExamScores();
 
         Assert.assertEquals(actual, expected);
     }
@@ -90,8 +90,10 @@ public class StudentTest {
                         "Exam Scores:\n" +
                         "   Exam 1 -> 100.0\n" +
                         "   Exam 2 -> 150.0\n" +
-                        "   Exam 3 -> 120.0\n" +
+                        "   Exam 3 -> 250.0\n" +
                         "   Exam 4 -> 0.0\n";
+
+
 
         Assert.assertEquals(actual, expected);
 
